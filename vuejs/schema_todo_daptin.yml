@@ -10,6 +10,6 @@ Tables:
         DataType: int(1)
         Default: false 
 Imports:
-  - FilePath: /data/initial.csv
-    Entity: storage
-    FileType: csv
+  - FilePath: /data/initial.json
+    Entity: site
+    FileType: json
