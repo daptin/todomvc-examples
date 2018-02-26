@@ -2,6 +2,7 @@ version: '3'
 services:
     web:
         build: .
+        image: daptin/todomvc-vuejs
         ports:
             - "8090:8080"
         restart: always
@@ -11,8 +12,6 @@ services:
           DAPTIN_DB_CONNECTION_STRING: 'todouser:todopassword@tcp(mysqldb:3306)/todolist'
         depends_on:
             - mysqldb
-        volumes:
-            - ".:/site"
     mysqldb:
         image: mysql
         container_name: ${MYSQL_HOST}
